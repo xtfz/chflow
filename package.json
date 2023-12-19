@@ -1,0 +1,28 @@
+{
+  "name": "chflow",
+  "version": "0.0.1",
+  "description": "ChangeFlow CLI — Manage your ChangeFlow project changelogs from your terminal!",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "node postinstall.js"
+  },
+  "keywords": [
+    "changeflow",
+    "changelogs",
+    "cli",
+    "logs",
+    "changes",
+    "xtfz"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0",
+    "figlet": "^1.7.0",
+    "inquirer": "^8.2.6",
+    "node-fetch-commonjs": "^3.3.2"
+  }
+}
