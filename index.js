@@ -1,4 +1,4 @@
-const { Command } = require("commander");
+const {Command} = require("commander");
 const figlet = require("figlet");
 const chalk = require("chalk");
 const center = require("center-align");
@@ -13,25 +13,25 @@ const commands = {
 const program = new Command();
 
 let banner = figlet.textSync("ChangeFlow");
-let tag = `By ${chalk.blue("XTFZ")} • Author: ${chalk.magentaBright.bold(
+let tag = `By ${chalk.blue("XTFZ")} • Author: ${chalk.magenta.bold(
   "Pratik"
 )}`;
 let bannerText = `
  ╔════════════════════════════════════════════════════════════╗
 
-${chalk.magentaBright.bold(banner)}
+${chalk.magenta.bold(banner)}
 
    ${center(chalk.red("The only Changelog Manager you need!"), 60)}
    ${center(tag, 80)}
 
-   ${center(chalk.magentaBright.bold("https://changeflow.xtfz.xyz/cli"), 70)}
+   ${center(chalk.magenta.bold("https://changeflow.xtfz.xyz/cli"), 70)}
 
  ╚════════════════════════════════════════════════════════════╝
 
   `;
 let endText = `\n${chalk.blue(
   "For documentation visit:"
-)} ${chalk.magentaBright.bold("https://changeflow.xtfz.xyz/cli/docs")}\n`;
+)} ${chalk.magenta.bold("https://changeflow.xtfz.xyz/cli/docs")}\n`;
 
 program
   .name("chflow")

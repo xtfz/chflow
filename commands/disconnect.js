@@ -17,7 +17,7 @@ module.exports = async () => {
     console.log(
       chalk.greenBright.bold("[✓]"),
       chalk.bold("Succesfully deleted file"),
-      chalk.magentaBright.bold(".changeflow.json")
+      chalk.magenta.bold(".changeflow.json")
     );
   } catch (e) {
     console.log(chalk.redBright.bold("An internal error has occured", e));

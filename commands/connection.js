@@ -34,19 +34,19 @@ module.exports = async () => {
 
     const projectInfo = `
   ╭───────────────────────────────────────────────╮
-    ${chalk.blue("Name")}: ${chalk.magentaBright.bold(data.project.name)}
-    ${chalk.blue("Slug")}: ${chalk.magentaBright.bold(data.project.slug)}
-    ${chalk.blue("ID")}: ${chalk.magentaBright.bold(data.project.id)}
-    ${chalk.blue("Description")}: ${chalk.magentaBright.bold(
+    ${chalk.blue("Name")}: ${chalk.magenta.bold(data.project.name)}
+    ${chalk.blue("Slug")}: ${chalk.magenta.bold(data.project.slug)}
+    ${chalk.blue("ID")}: ${chalk.magenta.bold(data.project.id)}
+    ${chalk.blue("Description")}: ${chalk.magenta.bold(
       data.project.description
     )}
-    ${chalk.blue("Visibility")}: ${chalk.magentaBright.bold(
+    ${chalk.blue("Visibility")}: ${chalk.magenta.bold(
       data.project.public ? "Yes" : "No"
     )}
-    ${chalk.blue("Created on")}: ${chalk.magentaBright.bold(
+    ${chalk.blue("Created on")}: ${chalk.magenta.bold(
       new Date(data.project.created).toLocaleDateString()
     )}
-    ${chalk.blue("Last edited")}: ${chalk.magentaBright.bold(
+    ${chalk.blue("Last edited")}: ${chalk.magenta.bold(
       new Date(data.project.last_edited).toLocaleDateString()
     )}
   ╰───────────────────────────────────────────────╯
