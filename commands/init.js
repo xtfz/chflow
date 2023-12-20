@@ -38,7 +38,7 @@ module.exports = async () => {
   // stage 1 — user login prompts
   const prompts = [
     {
-      type: "password",
+      type: "input",
       name: "CLI_KEY",
       message: "Enter your secret CLI Key:",
     },
