@@ -7,6 +7,7 @@ const center = require("center-align");
 const commands = {
   init: require("./commands/init"),
   disconnect: require("./commands/disconnect"),
+  connection: require("./commands/connection"),
 };
 
 const program = new Command();
@@ -51,5 +52,10 @@ program
   .command("disconnect")
   .description("Disconnect from currect connected project")
   .action(commands.disconnect);
+
+program
+  .command("connection")
+  .description("Get connected project information")
+  .action(commands.connection);
 
 program.parse(process.argv);
