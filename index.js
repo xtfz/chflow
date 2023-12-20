@@ -4,7 +4,10 @@ const chalk = require("chalk");
 const center = require("center-align");
 
 // Commands
-const init = require("./commands/init");
+const commands = {
+  init: require("./commands/init"),
+  disconnect: require("./commands/disconnect"),
+};
 
 const program = new Command();
 
@@ -42,6 +45,11 @@ program.addHelpText("afterAll", endText);
 program
   .command("init")
   .description("Setup new ChangeFlow Project or connect to an existing one")
-  .action(init);
+  .action(commands.init);
+
+program
+  .command("disconnect")
+  .description("Disconnect from currect connected project")
+  .action(commands.disconnect);
 
 program.parse(process.argv);
