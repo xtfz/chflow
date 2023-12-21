@@ -4,7 +4,6 @@
   "description": "ChangeFlow CLI — Manage your ChangeFlow project changelogs from your terminal!",
   "main": "./bin/index.js",
   "scripts": {
-    "start": "node ./bin/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "node postinstall.js"
   },

@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 const {Command, Option} = require("commander");
 const figlet = require("figlet");
 const chalk = require("chalk");
