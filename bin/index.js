@@ -5,11 +5,11 @@ const center = require("center-align");
 
 // Commands
 const commands = {
-  init: require("./commands/init"),
-  disconnect: require("./commands/disconnect"),
-  connection: require("./commands/connection"),
-  changelogs: require("./commands/changelogs"),
-  create: require("./commands/create"),
+  init: require("../commands/init"),
+  disconnect: require("../commands/disconnect"),
+  connection: require("../commands/connection"),
+  changelogs: require("../commands/changelogs"),
+  create: require("../commands/create"),
 };
 
 const program = new Command();

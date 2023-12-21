@@ -1,10 +1,10 @@
 {
   "name": "chflow",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "ChangeFlow CLI — Manage your ChangeFlow project changelogs from your terminal!",
-  "main": "index.js",
+  "main": "./bin/index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node ./bin/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "node postinstall.js"
   },
@@ -16,6 +16,9 @@
     "changes",
     "xtfz"
   ],
+  "bin": {
+    "chflow": "./bin/index.js"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
