@@ -127,7 +127,9 @@ module.exports = async () => {
       },
     ];
 
-    if (methodAns.init_method == "Connect to an existing Project on ChangeFlow") {
+    if (
+      methodAns.init_method == "Connect to an existing Project on ChangeFlow"
+    ) {
       userData.user.projects.forEach((value) => {
         allProjectsPrompt[0].choices.push({
           name: chalk.magenta.bold(` ${value.slug} `),
@@ -135,7 +137,8 @@ module.exports = async () => {
       });
 
       const selectedProject = await inquirer.prompt(allProjectsPrompt);
-      const selectedProjectSlug = selectedProject.selected_project.split(" ")[1];
+      const selectedProjectSlug =
+        selectedProject.selected_project.split(" ")[1];
       const selectedProjectData = userData.user.projects.find(
         (v) => v.slug == selectedProjectSlug
       );
@@ -213,8 +216,7 @@ module.exports = async () => {
     console.log(chalk.bold("Happy Coding!"));
 
     process.exit();
-
   } catch (e) {
-    console.log(chalk.redBright.bold("An internal error has occured"), e)
+    console.log(chalk.redBright.bold("An internal error has occured"), e);
   }
 };

@@ -1,4 +1,4 @@
-const {Command} = require("commander");
+const { Command, Option } = require("commander");
 const figlet = require("figlet");
 const chalk = require("chalk");
 const center = require("center-align");
@@ -8,14 +8,13 @@ const commands = {
   init: require("./commands/init"),
   disconnect: require("./commands/disconnect"),
   connection: require("./commands/connection"),
+  changelogs: require("./commands/changelogs"),
 };
 
 const program = new Command();
 
 let banner = figlet.textSync("ChangeFlow");
-let tag = `By ${chalk.blue("XTFZ")} • Author: ${chalk.magenta.bold(
-  "Pratik"
-)}`;
+let tag = `By ${chalk.blue("XTFZ")} • Author: ${chalk.magenta.bold("Pratik")}`;
 let bannerText = `
  ╔════════════════════════════════════════════════════════════╗
 
@@ -29,9 +28,9 @@ ${chalk.magenta.bold(banner)}
  ╚════════════════════════════════════════════════════════════╝
 
   `;
-let endText = `\n${chalk.blue(
-  "For documentation visit:"
-)} ${chalk.magenta.bold("https://changeflow.xtfz.xyz/cli/docs")}\n`;
+let endText = `\n${chalk.blue("For documentation visit:")} ${chalk.magenta.bold(
+  "https://changeflow.xtfz.xyz/cli/docs"
+)}\n`;
 
 program
   .name("chflow")
@@ -42,6 +41,8 @@ program
 
 program.addHelpText("beforeAll", bannerText);
 program.addHelpText("afterAll", endText);
+
+// Commands here cuz too lazy for handler
 
 program
   .command("init")
@@ -57,5 +58,22 @@ program
   .command("connection")
   .description("Get connected project information")
   .action(commands.connection);
+
+program
+  .command("changelogs")
+  .description("Display previous changelogs in a tabular form")
+  .option(
+    "-m, --max <number>",
+    "Set the maximum number of changelogs to display",
+    "10"
+  )
+  .addOption(
+    new Option("-s, --sort <sorted data>", "How the data should be sorted")
+      .choices(["latest_first", "oldest_first"])
+      .default("latest_first")
+  )
+  .action(commands.changelogs);
+
+// ===========
 
 program.parse(process.argv);
