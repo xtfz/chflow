@@ -9,6 +9,7 @@ const commands = {
   disconnect: require("./commands/disconnect"),
   connection: require("./commands/connection"),
   changelogs: require("./commands/changelogs"),
+  create: require("./commands/create"),
 };
 
 const program = new Command();
@@ -39,7 +40,7 @@ program
   )
   .version("0.0.1");
 
-program.addHelpText("beforeAll", bannerText);
+program.addHelpText("before", bannerText);
 program.addHelpText("afterAll", endText);
 
 // Commands here cuz too lazy for handler
@@ -73,6 +74,11 @@ program
       .default("latest_first")
   )
   .action(commands.changelogs);
+
+program
+  .command("create")
+  .description("Create a changelog")
+  .action(commands.create);
 
 // ===========
 

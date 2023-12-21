@@ -16,6 +16,16 @@ module.exports = async () => {
       process.exit(1);
     }
 
+    if (fs.readFileSync(".changeflow.json").toString() == "") {
+      console.log(
+        chalk.redBright.bold("[ERROR]"),
+        "—",
+        chalk.bold(
+          '".changeflow.json" file is empty, delete it and initialise project before creating changelog.'
+        )
+      );
+    }
+
     const config = require(`${process.cwd()}/.changeflow.json`);
 
     const data = await getProjectData(
