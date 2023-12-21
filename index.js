@@ -1,4 +1,4 @@
-const { Command, Option } = require("commander");
+const {Command, Option} = require("commander");
 const figlet = require("figlet");
 const chalk = require("chalk");
 const center = require("center-align");
@@ -21,7 +21,7 @@ let bannerText = `
 
 ${chalk.magenta.bold(banner)}
 
-   ${center(chalk.red("The only Changelog Manager you need!"), 60)}
+   ${center(chalk.yellow.bold("The only Changelog Manager you need!"), 70)}
    ${center(tag, 80)}
 
    ${center(chalk.magenta.bold("https://changeflow.xtfz.xyz/cli"), 70)}
@@ -41,7 +41,7 @@ program
   .version("0.0.1");
 
 program.addHelpText("before", bannerText);
-program.addHelpText("afterAll", endText);
+// program.addHelpText("afterAll", endText);
 
 // Commands here cuz too lazy for handler
 
