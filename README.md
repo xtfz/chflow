@@ -1,10 +1,12 @@
-# chflow — CLI for ChangeFlow
+## chflow — CLI for ChangeFlow
 
-## Manage your changelogs from your terminal using our official powerful Command Line Interface tool for ChangeFlow
+### Manage your changelogs from your terminal using our official powerful Command Line Interface tool for ChangeFlow
 
 ```
 npm i -g chflow@latest
 ```
+
+
 
 Documentation still in development!
 
