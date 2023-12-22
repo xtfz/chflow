@@ -1,6 +1,6 @@
 {
   "name": "chflow",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "ChangeFlow CLI — Manage your ChangeFlow project changelogs from your terminal!",
   "main": "./bin/index.js",
   "scripts": {
@@ -21,7 +21,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "center-align": "^1.0.2",
+    "center-align": "^1.0.1",
     "chalk": "^4.1.2",
     "cli-table": "^0.3.11",
     "commander": "^11.1.0",
