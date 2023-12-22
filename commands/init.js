@@ -21,7 +21,7 @@ module.exports = async () => {
       process.exit(1);
     }
 
-    if (fs.readFileSync(".changeflow.json").toString() == "") {
+    if (fs.existsSync(".changeflow.json") && fs.readFileSync(".changeflow.json").toString() == "") {
       console.log(
         chalk.redBright.bold("[ERROR]"),
         "—",
